@@ -1,0 +1,9 @@
+div {
+  border-bottom: double;
+  border-bottom: 5px solid black;
+  margin-bottom: 15px;
+}
+
+button {
+  margin-bottom: 2px;
+}
