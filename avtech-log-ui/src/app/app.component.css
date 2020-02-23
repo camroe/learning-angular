@@ -38,6 +38,12 @@ p {
   font-weight: 600;
 }
 
+.toolbar button {
+  background-color: #1976d2;
+  color: white;
+  margin-left: 20px;
+}
+
 .toolbar img {
   margin: 0 16px;
 }
@@ -107,11 +113,6 @@ svg.material-icons:not(:last-child) {
 
 .card-container .card:not(.highlight-card) {
   cursor: pointer;
-}
-
-.card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(black, 0.35);
 }
 
 .card-container .card:not(.highlight-card):hover .material-icons path {
