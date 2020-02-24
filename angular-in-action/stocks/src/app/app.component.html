@@ -1,0 +1,33 @@
+<h1>{{ title | uppercase }}</h1>
+<!--This markup is based around the Material Design Lite design style for how to create-->
+<!--a basic toolbar and main body.-->
+<!--See index.html for the link/import of the material design formats-->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Stock Tracker</span>
+      <div class="mdl-layout-spacer"></div>
+      <!--      <nav class="mdl-navigation mdl-layout&#45;&#45;large-screen-only">-->
+      <!--        <a class="mdl-navigation__link">Dashboard</a>-->
+      <!--        <a class="mdl-navigation__link">Manage</a>-->
+      <!--      </nav>-->
+      <nav class="mdl-navigation mdl-layout--large-screen-only">
+        <a class="mdl-navigation__link" [routerLink]="['/']">Dashboard</a>
+        <a class="mdl-navigation__link" [routerLink]="['/manage']">Manage</a>
+      </nav>
+    </div>
+  </header>
+  <!--  If there is a return from the summary component (using the StocksService) then display it, else do nothing.-->
+  <!--  *ngIf="stocks", which is a directive that will only render the contents-->
+  <!--  inside the element when the expression is true. In this case, it won’t render the-->
+  <!--  Summary component until the stock data has been loaded.-->
+  <!--  This has been commented out to allow the dashboard component-->
+  <!--  <main class="mdl-layout__content" style="padding: 20px;" *ngIf="stocks">-->
+  <!--    <app-summary [stock]="stocks[0]"></app-summary>-->
+  <!--  </main>-->
+  <main class="mdl-layout__content" style="padding: 20px;">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>
+
